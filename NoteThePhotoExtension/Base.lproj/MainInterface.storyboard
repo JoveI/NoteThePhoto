@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cSo-fd-YlB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Editing View Controller-->
+        <scene sceneID="6AM-9X-mWa">
+            <objects>
+                <viewController id="cSo-fd-YlB" customClass="PhotoEditingViewController" customModule="NoteThePhotoExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Alj-Vx-huL"/>
+                        <viewControllerLayoutGuide type="bottom" id="k0Y-Eu-YSi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AuB-n3-Rer">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KUC-6I-FkP" userLabel="StillImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vtv-7r-zVv" userLabel="InfoImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k0Y-Eu-YSi" firstAttribute="top" secondItem="KUC-6I-FkP" secondAttribute="bottom" id="ATN-Fu-ln0"/>
+                            <constraint firstItem="KUC-6I-FkP" firstAttribute="leading" secondItem="AuB-n3-Rer" secondAttribute="leading" id="BBB-ki-HuK"/>
+                            <constraint firstAttribute="trailing" secondItem="KUC-6I-FkP" secondAttribute="trailing" id="ach-qF-wVF"/>
+                            <constraint firstItem="KUC-6I-FkP" firstAttribute="top" secondItem="AuB-n3-Rer" secondAttribute="topMargin" id="wWZ-hA-XhO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="KUC-6I-FkP" id="8Mv-gL-v6K"/>
+                        <outlet property="infoImageView" destination="vtv-7r-zVv" id="Fa2-Y2-npi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="maH-ZT-Icl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="-143"/>
+        </scene>
+    </scenes>
+</document>
